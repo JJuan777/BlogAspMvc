@@ -1,0 +1,58 @@
+﻿@model ListaPaginada<Articulo>
+<h2 class="text-center mt-2">Resultado de la búsqueda</h2>
+
+@if (Model.Count() > 0)
+{
+    <hr />
+    <div class="row">
+        @foreach (var articulo in Model)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card h-100 shadow-lg border-0 rounded d-flex flex-column">
+                    <!-- Imagen con tamaño fijo -->
+                    <img src="@articulo.UrlImagen" class="card-img-top rounded-top" alt="Imagen de @articulo.Nombre"
+                         style="height: 200px; object-fit: cover;">
+
+                    <!-- Cuerpo con flex-grow para alineación -->
+                    <div class="card-body d-flex flex-column flex-grow-1 text-center">
+                        <h5 class="card-title fw-bold">@articulo.Nombre</h5>
+
+                        <!-- Botón alineado al final -->
+                        <div class="mt-auto">
+                            <a asp-action="Detalle" asp-route-id="@articulo.Id" class="btn btn-success rounded-pill px-4" style="border-radius: 10px">
+                                Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No se encontraron resultados</p>
+}
+
+<br />
+<br />
+
+<!--Crear botones de páginación-->
+<div class="text-center">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                <a class="page-link" asp-controller="Home" asp-action="ResultadoBusqueda" asp-route-page="@(Model.PageIndex - 1)" asp-route-searchString="@Model.SearchString">Anterior</a>
+            </li>
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                    <a class="page-link" asp-controller="Home" asp-action="ResultadoBusqueda" asp-route-page="@i" asp-route-searchString="@Model.SearchString">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                <a class="page-link" asp-controller="Home" asp-action="ResultadoBusqueda" asp-route-page="@(Model.PageIndex + 1)" asp-route-searchString="@Model.SearchString">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>

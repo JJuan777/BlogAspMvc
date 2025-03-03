@@ -1,0 +1,63 @@
+﻿@model BlogCore.Models.Slider
+
+@{
+    ViewData["Title"] = "Editar Slider";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Editar Artículo</h1>
+    <form method="post" asp-action="Edit" class="mt-4" enctype="multipart/form-data">
+        @* enviar el id del artículo *@
+        <input type="hidden" asp-for="Id" />
+        <!-- Mensaje de validación general -->
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <!-- Sección Nombre -->
+        <div class="row mb-3">
+            <label asp-for="Nombre" class="col-form-label col-sm-3 text-end">Nombre:</label>
+            <div class="col-sm-9">
+                <input asp-for="Nombre" class="form-control" placeholder="Ingresa el nombre" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Sección Descripcion -->
+        <div class="row mb-3">
+            <label asp-for="Estado" class="col-form-label col-sm-3 text-end">Descripción:</label>
+            <div class="col-sm-9">
+                <input type="checkbox" asp-for="Estado" />
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Sección UrlImagen -->
+        <div class="row mb-3">
+            <label asp-for="Imagen" class="col-form-label col-sm-3 text-end"></label>
+            <div class="col-sm-9">
+                <input type="file" class="form-control" name="archivos" id="SubidaArchivo" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Vista previa de la imagen -->
+        <div class="row mb-3">
+            <div class="col-sm-9 offset-sm-3">
+                <img src="@Model.Imagen" width="300px" style="border-radius: 5px; border: 1px solid #bbb9b9" alt="Vista previa de la imagen" />
+            </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="row">
+            <div class="col-sm-9 offset-sm-3">
+                <partial name="_VistaCrearVolver" />
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+}

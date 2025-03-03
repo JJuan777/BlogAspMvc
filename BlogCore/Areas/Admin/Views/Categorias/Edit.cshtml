@@ -1,0 +1,38 @@
+﻿@model BlogCore.Models.Categoria
+
+@{
+    ViewData["Title"] = "Editar Categoría";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Editar Categoría</h1>
+    <form method="post" asp-action="Edit" class="mt-4">
+        <!-- Mensaje de validación general -->
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <!-- Sección Nombre -->
+        <div class="row mb-3">
+            <label asp-for="Nombre" class="col-form-label col-sm-3 text-end">Nombre:</label>
+            <div class="col-sm-9">
+                <input asp-for="Nombre" class="form-control" placeholder="Ingresa el nombre" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Sección Orden -->
+        <div class="row mb-3">
+            <label asp-for="Orden" class="col-form-label col-sm-3 text-end">Orden:</label>
+            <div class="col-sm-9">
+                <input asp-for="Orden" class="form-control" type="number" placeholder="Ingresa el Orden" />
+                <span asp-validation-for="Orden" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="row">
+            <div class="col-sm-9 offset-sm-3">
+                <partial name="_VistaCrearVolver" />
+            </div>
+        </div>
+    </form>
+</div>

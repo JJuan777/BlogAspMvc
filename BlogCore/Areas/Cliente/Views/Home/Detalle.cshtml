@@ -1,0 +1,41 @@
+﻿@model BlogCore.Models.Articulo
+
+@{
+    ViewData["Title"] = "Detalle Artículo";
+
+    DateTime fechaCreacion = DateTime.Parse(Model.FechaCreacion);
+
+    string fechaFormateada = fechaCreacion.ToString("dd/MM/yyyy");
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <!-- Header -->
+        <div class="card-header bg-dark text-light d-flex justify-content-between align-items-center">
+            <h4 class="m-0">@Model.Nombre</h4>
+            <span class="text-light font-weight-light">Fecha: @fechaFormateada</span>
+        </div>
+
+        <!-- Body -->
+        <div class="card-body">
+            <!-- Image -->
+            <div class="text-center mb-4">
+                <img src="@Model.UrlImagen" class="img-fluid rounded shadow" alt="Imagen del artículo" style="max-height: 400px; object-fit: cover;" />
+            </div>
+            
+            <!-- Description -->
+            <div>
+                <p class="text-justify" style="line-height: 1.8; font-size: 1.1rem;">
+                    @Html.Raw(Model.Descripcion)
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer bg-light text-right">
+            <a asp-action="Index" class="btn btn-outline-dark btn-sm px-4 py-2">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/*.busqueda::placeholder {
+    color: #101010 !important;
+}*/
+
+.navbar {
+    padding: 10px 0;
+}
+
+.busqueda input-group-append {
+    display: flex;
+    align-items: center;
+}
+
+.busqueda btn-secundary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.IconoNav {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.banner-conteiner {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    background: url('../imagenes/bannerEnd.webp') center no-repeat;
+    background-size: cover;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    text-align: center;
+}
+.subscribe.btn {
+    padding: 15px 30px;
+    font-size: 32px;
+    border-radius: 14px;
+}

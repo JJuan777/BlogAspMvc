@@ -1,0 +1,13 @@
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\bin\Debug\net8.0\BlogCore.Models.deps.json
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\bin\Debug\net8.0\BlogCore.Models.dll
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\bin\Debug\net8.0\BlogCore.Models.pdb
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.AssemblyInfoInputs.cache
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.AssemblyInfo.cs
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.csproj.CoreCompileInputs.cache
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.dll
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\refint\BlogCore.Models.dll
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.pdb
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\ref\BlogCore.Models.dll
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.csproj.AssemblyReference.cache
+C:\laragon\www\BlogMVC\BlogCore\BlogCore.Models\obj\Debug\net8.0\BlogCore.Models.sourcelink.json
