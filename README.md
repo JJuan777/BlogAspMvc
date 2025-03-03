@@ -48,7 +48,7 @@ BlogAspMVC/
 ## 🛠️ Installation and Setup
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/JJuan777/BlogAspMVC.git
+   git clone https://github.com/JJuan777/BlogAspMvc.git
    cd BlogAspMVC
    ```
 2. **Configure the Database**
@@ -71,8 +71,6 @@ BlogAspMVC/
 - Database configuration with migrations on Azure.
 - Integration with authentication and cloud storage services.
 
-## 📧 Contact
-For any questions or suggestions, you can contact me at **[tuemail@example.com](mailto:tuemail@example.com)** or visit my profile on **[GitHub](https://github.com/JJuan777)**.
 
 ---
 **© 2025 - Blog ASP.NET 8 MVC** 🚀
